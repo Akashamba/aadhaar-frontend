@@ -1,17 +1,19 @@
 import React from 'react';
+import Container from '@mui/material/Container';
 import { Switch, Route,  } from 'react-router-dom';
-import VidCaptcha from './components/vid-captcha/vid-captcha.component';
-import VidOTP from './components/vid-otp/vid-otp.component';
+import CaptchaPage from './pages/vid-captcha-page/vid-captcha-page.component';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-    <Switch>
-      <Route exact path='/vid/captcha' component={VidCaptcha} />
-      <Route exact path='/vid/otp' component={VidOTP} />
-      {/*<Route exact path="" component={Homepage} />*/}
-    </Switch>
+    <Container maxWidth="sm" className="container">
+    <h1>Resident Application</h1>
+      <Switch>
+        <Route exact path='/vid' component={CaptchaPage} />
+        {/*<Route exact path="" component={Homepage} />*/}
+      </Switch>
+    </Container>
       
     </div>
   );
