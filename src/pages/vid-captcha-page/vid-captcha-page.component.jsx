@@ -105,7 +105,7 @@ class CaptchaPage extends React.Component {
         const { name, value } = event.target;
         const { payload } = this.state;
         payload[name] = value;
-        this.setState({"payload": payload}, () => console.log(this.state))
+        this.setState({"payload": payload})
     }
 
     render() {

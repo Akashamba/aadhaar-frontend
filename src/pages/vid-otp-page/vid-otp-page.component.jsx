@@ -2,7 +2,6 @@ import React from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
 
 class OtpPage extends React.Component {
     constructor(props) {
@@ -25,7 +24,8 @@ class OtpPage extends React.Component {
             "Content-Type": "application/json"
         }
         payload["uid"] = this.props.uidNumber;
-        payload["mobile"] = this.props.mobileNumber;
+        // payload["mobile"] = this.props.mobileNumber;
+        payload["mobile"] = "7299412893"
         payload["otpTxnId"] = this.props.txnId;
         console.log(payload)
         axios.post(process.env.REACT_APP_VID_API, JSON.stringify(payload), {headers})
