@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, Route,  } from 'react-router-dom';
+import VidCaptcha from './components/vid-captcha/vid-captcha.component';
+import VidOTP from './components/vid-otp/vid-otp.component';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Switch>
+      <Route exact path='/vid/captcha' component={VidCaptcha} />
+      <Route exact path='/vid/otp' component={VidOTP} />
+      {/*<Route exact path="" component={Homepage} />*/}
+    </Switch>
+      
     </div>
   );
 }
