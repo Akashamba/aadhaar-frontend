@@ -10,7 +10,7 @@ function App() {
     <Container maxWidth="sm" className="container">
     <h1>Resident Application</h1>
       <Switch>
-        <Route exact path='/vid' component={CaptchaPage} />
+        <Route exact path='/' component={CaptchaPage} />
         {/*<Route exact path="" component={Homepage} />*/}
       </Switch>
     </Container>
